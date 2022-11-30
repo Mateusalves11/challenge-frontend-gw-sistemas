@@ -19,3 +19,17 @@ export const Title = styled.h1`
     font-size: 18px;
     margin-bottom: 16px;
 `
+export const Input = styled.input`
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 300px;
+`
+
+export const Box = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+`
