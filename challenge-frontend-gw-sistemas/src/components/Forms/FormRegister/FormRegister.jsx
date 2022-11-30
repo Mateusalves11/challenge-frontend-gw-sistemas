@@ -35,7 +35,7 @@ export function FormRegister() {
         try {
             await signup(email, password);
         } catch (err) {
-            setError('Erro ao registrar');
+            setError(`Ocorreu um erro ao registrar: ${err}`);
             setOpen(true);
         }
     }

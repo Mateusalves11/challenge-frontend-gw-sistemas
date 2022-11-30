@@ -7,4 +7,3 @@ export function Button({ children, onClick }) {
         </S.Button>
     );
 }
-
