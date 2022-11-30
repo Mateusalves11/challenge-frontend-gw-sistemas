@@ -8,11 +8,11 @@ import api from "services/api";
 export function Users() {
   tabTitle('Users')
 
-  const [data, setData] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     api.get('users?page=2').then(({ data }) => {
-      setData(data.data);
+      setUsers(data.data);
     })
   }, []);
 
@@ -20,7 +20,7 @@ export function Users() {
     <S.Users>
       <S.Container>
         <S.Title>List all users</S.Title>
-        {data.map((item) => (<UserCard id={item.id} key={item.id} image={item.avatar} name={item.first_name} email={item.email} />))}
+        {users.map((item) => (<UserCard id={item.id} key={item.id} image={item.avatar} name={item.first_name} email={item.email} />))}
       </S.Container>
     </S.Users>
 
