@@ -25,6 +25,7 @@ export function FormRegister() {
     const handleRegister = async () => {
         if (!email || !password || !passwordConfirm) {
             setError('Preencha todos os campos');
+            setOpen(true);
             return;
         }
         if (password !== passwordConfirm) {
